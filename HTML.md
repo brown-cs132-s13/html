@@ -42,10 +42,12 @@ Once that's done, you should be able to access `http://<username>.proj132.cs.bro
 
 #### Specifications
 * Using CSS, style `appstack.html` to look like the image mockups provided. *And make sure to click through to see it in full size*.
+
     [![Appstack Mockup](HTML_part1_mockup.png)](HTML_part1_mockup.png)
 * The navigation bar should stay at the top of the screen when scrolling.
     * Note: see [facebook.com](http://facebook.com) or [techcrunch.com](http://techcrunch.com)
 * All image links should have hover actions. See the annotated image mock-up (*and make sure to click through to see it in full size*).
+
     [![Annotated Appstack Mockup](HTML_part1_annotated.png)](HTML_part1_annotated.png)
 * The main container on the page should be centered in the browser window.
 * Hint: As you might notice in looking through the stencil code, the navigation bar buttons are an image sprite. To make your life easier, we've calculated certain attributes for the sprites that you might find useful:
