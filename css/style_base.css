@@ -1,0 +1,40 @@
+/* ===============================================
+========== USE @font-face to load fonts ==========
+==================================================*/
+
+/*These are all of the custom fonts you will have to link.*/
+@font-face {
+font-family:"ff-dagny-web-pro-1";
+src:url("../fonts/DagnyWebPro.eot");
+}
+
+@font-face {
+font-family:"ff-dagny-web-pro-light";
+src:url(../fonts/DagnyWebPro-Xlight.woff) format("woff");
+}
+
+@font-face {
+font-family:"ff-dagny-web-pro-2";
+src:url(../fonts/DagnyWebPro.woff) format("woff");
+}
+
+@font-face {
+font-family:"ff-dagny-web-pro-bold";
+src:url(../fonts/DagnyWebPro-Bold.woff) format("woff");
+}
+
+/* ===============================================
+================ Some TA styling… ================
+==================================================*/
+
+/*The general width of the layout; scrollbars will appear if window is less wide.*/
+body{
+min-width:1040px;
+}
+
+/*Take note of how to apply use of a custom font*/
+h1,h2,h3,h4,h5,p {
+padding:0;
+margin:0;
+font-family:"ff-dagny-web-pro-1","ff-dagny-web-pro-2","Helvetica Neue", Helvetica, Arial, sans-serif;
+}
