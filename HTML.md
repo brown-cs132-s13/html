@@ -1,4 +1,5 @@
 # Assignment One: HTML/CSS
+## Due: February 6th, 2013 @ 11:59pm
 This is a multi-part assignment with the objective of making you comfortable working with HTML and CSS. By the end of this assignment, you will have styled the HTML of a standard, but complex, website home page, and created a website of your own.
 
 **Note:** Only CSS and HTML need to be used for this assignment. If you're using JavaScript (or libraries such as jQuery), you might be thinking a little too hard about how to do this.
@@ -31,30 +32,34 @@ All image links should have hover actions according to the annotated mock-up bel
 
 [![Annotated Appstack Mockup](HTML_part1_annotated.png)](HTML_part1_annotated.png)
 
-Hint: As you might notice in looking through the stencil code, the navigation bar buttons are an image sprite. To make your life easier, we've calculated certain attributes for the sprites that you might find useful:
+Hint: As you might notice in looking through the stencil code, the navigation bar buttons are an image sprite (if that sounds like a foreign concept, check out [the last few slides in Matt's CSS lecture](http://cs.brown.edu/courses/csci1320/lectures/cs132lectCSS.pdf)). To make your life easier, we've calculated certain attributes for the sprites that you might find useful:
 
-* "Unhovered" buttons: `background-position, y value: 0;`
-* "Hover" buttons: `background-position, y value: -59px;`
-* Features Button: `width: 90px; background-position, x value: 0;`
-* Pricing Button: `width: 80px; background-position, x value: -91px;`
-* Addons Button: `width: 90px; background-position, x value: -172px;`
-* About Button: `width: 72px; background-position, x value: -263px;`
-* Customers Button: `width: 105px; background-position, x value: -437px;`
-* Blog Button: `width: 65px; background-position, x value: -543px;`
+* "Unhovered" buttons: `background-position: xxx 0;`
+* "Hover" buttons: `background-position: xxx -59px;`
+* Features Button: `width: 90px; background-position: 0 0;`
+* Pricing Button: `width: 80px; background-position: -91px 0;`
+* Addons Button: `width: 90px; background-position: -172px 0;`
+* About Button: `width: 72px; background-position: -263px 0;`
+* Customers Button: `width: 105px; background-position: -437px 0;`
+* Blog Button: `width: 65px; background-position: -543px 0;`
 
-Note: While we don't require pixel perfect accuracy in this assignment, your styled webpage must be consistent on all major browsers (Chrome and Firefox). To access the latest versions of each browser available in the department:
+Note: While we don't require pixel perfect accuracy in this assignment, your styled webpage must be consistent on both Chrome and Firefox. To access the latest versions of each browser available in the department:
 
 * Firefox: From the command-line, type 'firefox_stable'. Note that Iceweasel, the department's default browser, is not an acceptable substitute.
 * Chrome: From the command-line, type 'google-chrome'.
 
 ## Part One: Getting Started
-Create a new directory to hold your project's files, and then run:
+Create a new directory to hold your project's files (e.g., `mkdir html`), change into it (e.g., `cd html`), and then run:
 
     cs132_install html
 
+If you don't have a CS account yet, you can download a copy of the project from GitHub: [https://github.com/brown-cs132-s13/html/archive/master.zip](https://github.com/brown-cs132-s13/html/archive/master.zip).
+
 This will setup your project with a selection of images, fonts, and a minimal CSS file in which you'll implement the project.
 
-Any images you'll need can be found in the `images` folder, which in your CSS, can be referenced as `../images`. All of your CSS should go in the `style_base.css` file, which can be found in the `css` folder. **Do not edit** `appstack.html` under any circumstances -- you should only make changes to `style_base.css`.
+Any images you'll need can be found in the `images` folder, which in your CSS, can be referenced as `../images` (when CSS is in its own file, URLs are relative to the CSS file, not the page it's loaded on). All of your CSS should go in the `style_base.css` file, which can be found in the `css` folder.
+
+**Do not edit** `appstack.html` under any circumstances -- you should only need to make changes to `style_base.css`.
 
 ## Part Two: The Problem
 There are two options for completing the second part of this assignment: you can either create your own personal web page, or create a new CS132 course website.
@@ -77,9 +82,14 @@ Your website should have a clearly-displayed title image and logo that includes 
 
 You should have a navigation bar that links to each of those pages.
 
+## Troubleshooting
+If you're having problems, you can always talk to the friendly and talented TAs. We're available from 7-9pm on Mondays, Wednesdays, and Thursdays in the Moonlab (CIT 227), and can be reached via email at [cs132tas@cs.brown.edu](mailto:cs132tas@cs.brown.edu).
+
 ## Handing In
 To hand in your project, from your project directory, run:
 
     cs132_handin html
+
+**Note:** if the handin script isn't working for you, you can email a copy of your code to the TAs.
 
 That's it!

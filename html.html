@@ -133,6 +133,10 @@ pre .tex .formula {
   opacity: 0.5;
 }
 
+#wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
 
 </style>
 
@@ -140,6 +144,8 @@ pre .tex .formula {
 <body class="normal">
   <div id="wrapper">
       <h1 id="assignmentone:htmlcss">Assignment One: HTML/CSS</h1>
+
+<h2 id="due:february6th201311:59pm">Due: February 6th, 2013 @ 11:59pm</h2>
 
 <p>This is a multi-part assignment with the objective of making you comfortable working with HTML and CSS. By the end of this assignment, you will have styled the HTML of a standard, but complex, website home page, and created a website of your own.</p>
 
@@ -178,20 +184,20 @@ pre .tex .formula {
 
 <p><a href="HTML_part1_annotated.png"><img src="HTML_part1_annotated.png" alt="Annotated Appstack Mockup" /></a></p>
 
-<p>Hint: As you might notice in looking through the stencil code, the navigation bar buttons are an image sprite. To make your life easier, we&#8217;ve calculated certain attributes for the sprites that you might find useful:</p>
+<p>Hint: As you might notice in looking through the stencil code, the navigation bar buttons are an image sprite (if that sounds like a foreign concept, check out <a href="http://cs.brown.edu/courses/csci1320/lectures/cs132lectCSS.pdf">the last few slides in Matt&#8217;s CSS lecture</a>). To make your life easier, we&#8217;ve calculated certain attributes for the sprites that you might find useful:</p>
 
 <ul>
-<li>&#8220;Unhovered&#8221; buttons: <code>background-position, y value: 0;</code></li>
-<li>&#8220;Hover&#8221; buttons: <code>background-position, y value: -59px;</code></li>
-<li>Features Button: <code>width: 90px; background-position, x value: 0;</code></li>
-<li>Pricing Button: <code>width: 80px; background-position, x value: -91px;</code></li>
-<li>Addons Button: <code>width: 90px; background-position, x value: -172px;</code></li>
-<li>About Button: <code>width: 72px; background-position, x value: -263px;</code></li>
-<li>Customers Button: <code>width: 105px; background-position, x value: -437px;</code></li>
-<li>Blog Button: <code>width: 65px; background-position, x value: -543px;</code></li>
+<li>&#8220;Unhovered&#8221; buttons: <code>background-position: xxx 0;</code></li>
+<li>&#8220;Hover&#8221; buttons: <code>background-position: xxx -59px;</code></li>
+<li>Features Button: <code>width: 90px; background-position: 0 0;</code></li>
+<li>Pricing Button: <code>width: 80px; background-position: -91px 0;</code></li>
+<li>Addons Button: <code>width: 90px; background-position: -172px 0;</code></li>
+<li>About Button: <code>width: 72px; background-position: -263px 0;</code></li>
+<li>Customers Button: <code>width: 105px; background-position: -437px 0;</code></li>
+<li>Blog Button: <code>width: 65px; background-position: -543px 0;</code></li>
 </ul>
 
-<p>Note: While we don&#8217;t require pixel perfect accuracy in this assignment, your styled webpage must be consistent on all major browsers (Chrome and Firefox). To access the latest versions of each browser available in the department:</p>
+<p>Note: While we don&#8217;t require pixel perfect accuracy in this assignment, your styled webpage must be consistent on both Chrome and Firefox. To access the latest versions of each browser available in the department:</p>
 
 <ul>
 <li>Firefox: From the command-line, type &#8216;firefox_stable&#8217;. Note that Iceweasel, the department&#8217;s default browser, is not an acceptable substitute.</li>
@@ -200,14 +206,18 @@ pre .tex .formula {
 
 <h2 id="partone:gettingstarted">Part One: Getting Started</h2>
 
-<p>Create a new directory to hold your project&#8217;s files, and then run:</p>
+<p>Create a new directory to hold your project&#8217;s files (e.g., <code>mkdir html</code>), change into it (e.g., <code>cd html</code>), and then run:</p>
 
 <pre><code>cs132_install html
 </code></pre>
 
+<p>If you don&#8217;t have a CS account yet, you can download a copy of the project from GitHub: <a href="https://github.com/brown-cs132-s13/html/archive/master.zip">https://github.com/brown-cs132-s13/html/archive/master.zip</a>.</p>
+
 <p>This will setup your project with a selection of images, fonts, and a minimal CSS file in which you&#8217;ll implement the project.</p>
 
-<p>Any images you&#8217;ll need can be found in the <code>images</code> folder, which in your CSS, can be referenced as <code>../images</code>. All of your CSS should go in the <code>style_base.css</code> file, which can be found in the <code>css</code> folder. <strong>Do not edit</strong> <code>appstack.html</code> under any circumstances &#8211; you should only make changes to <code>style_base.css</code>.</p>
+<p>Any images you&#8217;ll need can be found in the <code>images</code> folder, which in your CSS, can be referenced as <code>../images</code> (when CSS is in its own file, URLs are relative to the CSS file, not the page it&#8217;s loaded on). All of your CSS should go in the <code>style_base.css</code> file, which can be found in the <code>css</code> folder.</p>
+
+<p><strong>Do not edit</strong> <code>appstack.html</code> under any circumstances &#8211; you should only need to make changes to <code>style_base.css</code>.</p>
 
 <h2 id="parttwo:theproblem">Part Two: The Problem</h2>
 
@@ -235,12 +245,18 @@ pre .tex .formula {
 
 <p>You should have a navigation bar that links to each of those pages.</p>
 
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<p>If you&#8217;re having problems, you can always talk to the friendly and talented TAs. We&#8217;re available from 7&#8211;9pm on Mondays, Wednesdays, and Thursdays in the Moonlab (CIT 227), and can be reached via email at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#99;&#x73;&#49;&#51;&#50;&#x74;&#97;&#115;&#x40;&#99;&#x73;&#46;&#98;&#114;&#111;&#x77;&#110;&#46;&#x65;&#x64;&#x75;">&#99;&#x73;&#x31;&#51;&#x32;&#116;&#x61;&#115;&#64;&#99;&#x73;&#x2e;&#98;&#114;&#111;&#x77;&#x6e;&#46;&#x65;&#x64;&#117;</a>.</p>
+
 <h2 id="handingin">Handing In</h2>
 
 <p>To hand in your project, from your project directory, run:</p>
 
 <pre><code>cs132_handin html
 </code></pre>
+
+<p><strong>Note:</strong> if the handin script isn&#8217;t working for you, you can email a copy of your code to the TAs.</p>
 
 <p>That&#8217;s it!</p>
 
